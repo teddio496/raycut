@@ -2,16 +2,7 @@
 
 A local-first Raycast shortcut visualizer. React, TypeScript, and Vite; a static build with no backend.
 
-## Run locally
-
-Requires Node 22.12+.
-
-```sh
-npm install
-npm run dev
-```
-
-Open http://127.0.0.1:5173. `/` shows Teddio’s 18-key demo; `/import` opens the file importer.
+Open the live app: [raycut.teddio496.workers.dev](https://raycut.teddio496.workers.dev/)
 
 ## Explore
 
@@ -35,20 +26,6 @@ npm run demo -- 'path/to/export.rayconfig'
 
 The local CLI asks for the password (visible in that terminal); `RAYCAST_EXPORT_PASSWORD` is also accepted. The password is not saved. Review `src/data/demo.json` before publishing; labels can themselves be personal. Do not add your `.rayconfig` to the repository.
 
-## Check
-
-```sh
-npm test
-npm run test:e2e
-npm run build
-```
-
-For the first browser test run, install Chromium with `npx playwright install chromium` if it is not already present. Tests use synthetic encrypted exports generated independently with Node crypto. The checked-in demo is verified to contain 18 supported bindings. Headless browser tests cover filtering, search, import retry, duplicate assignments, privacy, modal dismissal, mobile sizing, and blocked private files.
-
-## Free static deployment
-
-Connect this repository to Cloudflare Pages: build command `npm run build`, output directory `dist`, Node 22.12+. `public/_redirects` supports direct visits to `/import`. No function or server is required. HTTPS (or localhost) is required for browser cryptography. The app has not been deployed.
-
 ## Format references
 
 The importer is independently implemented from these format descriptions:
@@ -56,4 +33,4 @@ The importer is independently implemented from these format descriptions:
 - [Classic Raycast export format](https://github.com/abue-ammar/tinycast/blob/8915adc3e9fb500192c34b92252cd45e81d5e04a/docs/features/raycast-import.md)
 - [Current Raycast container format](https://github.com/abue-ammar/tinycast/blob/main/docs/features/raycast-import.md)
 
-Real classic-format export decoding has been verified. Modern encrypted formats are covered by synthetic compatibility fixtures; additional real exports are useful for verifying future schema changes.
+The importer follows the documented classic and current Raycast export formats.
