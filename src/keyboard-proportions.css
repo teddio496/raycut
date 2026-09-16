@@ -1,0 +1,43 @@
+/* One shared unit keeps every standard key square across all six rows. */
+.workspace {
+  flex: 0 0 auto;
+  grid-template-rows: 48px 38px auto 38px;
+}
+.keyboard-scroll {
+  container-type: inline-size;
+  overflow-y: hidden;
+}
+.keyboard {
+  --key-size: clamp(56px, min(calc((100cqw + 7px) / 14.65 - 7px), calc((100svh - 430px) / 6)), 100px);
+  width: calc((var(--key-size) + 7px) * 14.65 - 7px);
+  min-width: 0;
+  height: auto;
+  margin-inline: auto;
+}
+.key-row {
+  flex: none;
+  height: var(--key-size);
+}
+.key, .row-0 .key, .row-5 .key, .row-0 .key.assigned {
+  flex: none;
+  width: calc((var(--key-size) + 7px) * var(--key-units, 1) - 7px);
+  height: var(--key-size);
+  min-height: 0;
+  padding: clamp(5px, .65cqw, 10px);
+}
+.arrow-stack {
+  flex: none;
+  width: var(--key-size);
+  height: var(--key-size);
+}
+.row-5 .arrow-stack .key {
+  flex: none;
+  width: var(--key-size);
+  height: calc((var(--key-size) - 5px) / 2);
+}
+.key-binding { gap: 3px; }
+.key-binding svg, .row-0 .key-binding svg { width: 16px; height: 16px; }
+.key-binding>span, .row-0 .key-binding>span { font-size: clamp(8px, .75cqw, 10px); }
+@media (max-height: 740px) and (min-width: 900px) {
+  .workspace { grid-template-rows: 42px 32px auto 32px; }
+}

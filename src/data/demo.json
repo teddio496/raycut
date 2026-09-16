@@ -1,0 +1,195 @@
+{
+  "name": "Teddio’s shortcuts",
+  "shortcuts": [
+    {
+      "id": "shortcut-3-0",
+      "keyCode": 19,
+      "modifiers": [
+        "option"
+      ],
+      "title": "Aside",
+      "category": "app",
+      "source": "Applications"
+    },
+    {
+      "id": "shortcut-5-1",
+      "keyCode": 1,
+      "modifiers": [
+        "option"
+      ],
+      "title": "Bottom Half",
+      "category": "window",
+      "source": "Window Management"
+    },
+    {
+      "id": "shortcut-6-2",
+      "keyCode": 1,
+      "modifiers": [
+        "option",
+        "shift"
+      ],
+      "title": "Bottom Left Quarter",
+      "category": "window",
+      "source": "Window Management"
+    },
+    {
+      "id": "shortcut-7-3",
+      "keyCode": 2,
+      "modifiers": [
+        "option",
+        "shift"
+      ],
+      "title": "Bottom Right Quarter",
+      "category": "window",
+      "source": "Window Management"
+    },
+    {
+      "id": "shortcut-10-4",
+      "keyCode": 8,
+      "modifiers": [
+        "option"
+      ],
+      "title": "Center",
+      "category": "window",
+      "source": "Window Management"
+    },
+    {
+      "id": "shortcut-12-5",
+      "keyCode": 50,
+      "modifiers": [
+        "option"
+      ],
+      "title": "Codex",
+      "category": "app",
+      "source": "Applications"
+    },
+    {
+      "id": "shortcut-28-6",
+      "keyCode": 0,
+      "modifiers": [
+        "option"
+      ],
+      "title": "Left Half",
+      "category": "window",
+      "source": "Window Management"
+    },
+    {
+      "id": "shortcut-31-7",
+      "keyCode": 6,
+      "modifiers": [
+        "option"
+      ],
+      "title": "Maximize",
+      "category": "window",
+      "source": "Window Management"
+    },
+    {
+      "id": "shortcut-39-8",
+      "keyCode": 45,
+      "modifiers": [
+        "option"
+      ],
+      "title": "Raycast Notes",
+      "category": "command",
+      "source": "Raycast"
+    },
+    {
+      "id": "shortcut-41-9",
+      "keyCode": 2,
+      "modifiers": [
+        "option"
+      ],
+      "title": "Right Half",
+      "category": "window",
+      "source": "Window Management"
+    },
+    {
+      "id": "shortcut-48-10",
+      "keyCode": 18,
+      "modifiers": [
+        "option"
+      ],
+      "title": "Terminal",
+      "category": "app",
+      "source": "Applications"
+    },
+    {
+      "id": "shortcut-49-11",
+      "keyCode": 13,
+      "modifiers": [
+        "option"
+      ],
+      "title": "Top Half",
+      "category": "window",
+      "source": "Window Management"
+    },
+    {
+      "id": "shortcut-50-12",
+      "keyCode": 13,
+      "modifiers": [
+        "option",
+        "shift"
+      ],
+      "title": "Top Left Quarter",
+      "category": "window",
+      "source": "Window Management"
+    },
+    {
+      "id": "shortcut-51-13",
+      "keyCode": 14,
+      "modifiers": [
+        "option",
+        "shift"
+      ],
+      "title": "Top Right Quarter",
+      "category": "window",
+      "source": "Window Management"
+    },
+    {
+      "id": "shortcut-55-14",
+      "keyCode": 31,
+      "modifiers": [
+        "option"
+      ],
+      "title": "ChatGPT",
+      "destination": "https://chatgpt.com/",
+      "category": "link",
+      "source": "Quicklinks"
+    },
+    {
+      "id": "shortcut-57-15",
+      "keyCode": 34,
+      "modifiers": [
+        "option"
+      ],
+      "title": "Intervals.icu",
+      "destination": "https://intervals.icu/",
+      "category": "link",
+      "source": "Quicklinks"
+    },
+    {
+      "id": "shortcut-58-16",
+      "keyCode": 12,
+      "modifiers": [
+        "option"
+      ],
+      "title": "Quercus",
+      "destination": "https://q.utoronto.ca/",
+      "category": "link",
+      "source": "Quicklinks",
+      "nameInferred": true
+    },
+    {
+      "id": "shortcut--1-17",
+      "keyCode": 49,
+      "modifiers": [
+        "command"
+      ],
+      "title": "Raycast",
+      "category": "command",
+      "source": "Raycast"
+    }
+  ],
+  "warnings": [],
+  "version": "1.104.29"
+}

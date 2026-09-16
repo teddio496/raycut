@@ -1,0 +1,9 @@
+node_modules/
+dist/
+*.rayconfig
+.env*
+.DS_Store
+playwright-report/
+test-results/
+.local/
+*.tsbuildinfo
