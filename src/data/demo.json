@@ -2,7 +2,7 @@
   "name": "Teddio’s shortcuts",
   "shortcuts": [
     {
-      "id": "shortcut-3-0",
+      "id": "shortcut-5-0",
       "keyCode": 19,
       "modifiers": [
         "option"
@@ -12,8 +12,8 @@
       "source": "Applications"
     },
     {
-      "id": "shortcut-5-1",
-      "keyCode": 1,
+      "id": "shortcut-7-1",
+      "keyCode": 38,
       "modifiers": [
         "option"
       ],
@@ -22,29 +22,27 @@
       "source": "Window Management"
     },
     {
-      "id": "shortcut-6-2",
-      "keyCode": 1,
+      "id": "shortcut-8-2",
+      "keyCode": 0,
       "modifiers": [
-        "option",
-        "shift"
+        "option"
       ],
       "title": "Bottom Left Quarter",
       "category": "window",
       "source": "Window Management"
     },
     {
-      "id": "shortcut-7-3",
-      "keyCode": 2,
+      "id": "shortcut-9-3",
+      "keyCode": 1,
       "modifiers": [
-        "option",
-        "shift"
+        "option"
       ],
       "title": "Bottom Right Quarter",
       "category": "window",
       "source": "Window Management"
     },
     {
-      "id": "shortcut-10-4",
+      "id": "shortcut-12-4",
       "keyCode": 8,
       "modifiers": [
         "option"
@@ -54,8 +52,8 @@
       "source": "Window Management"
     },
     {
-      "id": "shortcut-12-5",
-      "keyCode": 50,
+      "id": "shortcut-14-5",
+      "keyCode": 18,
       "modifiers": [
         "option"
       ],
@@ -64,8 +62,19 @@
       "source": "Applications"
     },
     {
-      "id": "shortcut-28-6",
-      "keyCode": 0,
+      "id": "shortcut-20-6",
+      "keyCode": 45,
+      "modifiers": [
+        "option"
+      ],
+      "title": "Extension obsidian.daily Note Command 6090553e ee96 4c89 af5c e6c60fa551ba",
+      "category": "command",
+      "source": "Raycast",
+      "nameInferred": true
+    },
+    {
+      "id": "shortcut-33-7",
+      "keyCode": 4,
       "modifiers": [
         "option"
       ],
@@ -74,7 +83,7 @@
       "source": "Window Management"
     },
     {
-      "id": "shortcut-31-7",
+      "id": "shortcut-36-8",
       "keyCode": 6,
       "modifiers": [
         "option"
@@ -84,18 +93,20 @@
       "source": "Window Management"
     },
     {
-      "id": "shortcut-39-8",
-      "keyCode": 45,
+      "id": "shortcut-40-9",
+      "keyCode": 13,
       "modifiers": [
-        "option"
+        "shift",
+        "command"
       ],
-      "title": "Raycast Notes",
+      "title": "Extension aside.open new window aa5d0a0b 9ccd 49b8 b5d6 b40257ff367d",
       "category": "command",
-      "source": "Raycast"
+      "source": "Raycast",
+      "nameInferred": true
     },
     {
-      "id": "shortcut-41-9",
-      "keyCode": 2,
+      "id": "shortcut-47-10",
+      "keyCode": 37,
       "modifiers": [
         "option"
       ],
@@ -104,8 +115,18 @@
       "source": "Window Management"
     },
     {
-      "id": "shortcut-48-10",
-      "keyCode": 18,
+      "id": "shortcut-52-11",
+      "keyCode": 17,
+      "modifiers": [
+        "option"
+      ],
+      "title": "Sum Calories",
+      "category": "command",
+      "source": "Raycast"
+    },
+    {
+      "id": "shortcut-55-12",
+      "keyCode": 50,
       "modifiers": [
         "option"
       ],
@@ -114,8 +135,8 @@
       "source": "Applications"
     },
     {
-      "id": "shortcut-49-11",
-      "keyCode": 13,
+      "id": "shortcut-56-13",
+      "keyCode": 40,
       "modifiers": [
         "option"
       ],
@@ -124,63 +145,60 @@
       "source": "Window Management"
     },
     {
-      "id": "shortcut-50-12",
-      "keyCode": 13,
+      "id": "shortcut-57-14",
+      "keyCode": 12,
       "modifiers": [
-        "option",
-        "shift"
+        "option"
       ],
       "title": "Top Left Quarter",
       "category": "window",
       "source": "Window Management"
     },
     {
-      "id": "shortcut-51-13",
-      "keyCode": 14,
+      "id": "shortcut-58-15",
+      "keyCode": 13,
       "modifiers": [
-        "option",
-        "shift"
+        "option"
       ],
       "title": "Top Right Quarter",
       "category": "window",
       "source": "Window Management"
     },
     {
-      "id": "shortcut-55-14",
+      "id": "shortcut-63-16",
       "keyCode": 31,
       "modifiers": [
         "option"
       ],
-      "title": "ChatGPT",
-      "destination": "https://chatgpt.com/",
+      "title": "chatgpt",
       "category": "link",
-      "source": "Quicklinks"
+      "source": "Quicklinks",
+      "destination": "https://chatgpt.com/"
     },
     {
-      "id": "shortcut-57-15",
+      "id": "shortcut-66-17",
       "keyCode": 34,
       "modifiers": [
         "option"
       ],
-      "title": "Intervals.icu",
-      "destination": "https://intervals.icu/",
+      "title": "intervals",
       "category": "link",
-      "source": "Quicklinks"
+      "source": "Quicklinks",
+      "destination": "https://intervals.icu/"
     },
     {
-      "id": "shortcut-58-16",
-      "keyCode": 12,
+      "id": "shortcut-67-18",
+      "keyCode": 32,
       "modifiers": [
         "option"
       ],
-      "title": "Quercus",
-      "destination": "https://q.utoronto.ca/",
+      "title": "quercus",
       "category": "link",
       "source": "Quicklinks",
-      "nameInferred": true
+      "destination": "https://q.utoronto.ca/"
     },
     {
-      "id": "shortcut--1-17",
+      "id": "shortcut--1-19",
       "keyCode": 49,
       "modifiers": [
         "command"
