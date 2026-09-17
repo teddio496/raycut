@@ -42,20 +42,61 @@ export default function App() {
   function changeLayer(next:Modifier[]){setModifiers(next);setSelected(null);}
   function toggle(m:Modifier){changeLayer(modifiers.includes(m)?modifiers.filter(v=>v!==m):[...modifiers,m]);}
   useEffect(()=>{
-    const modifierForKey=(key:string):Modifier|undefined=>key==='Meta'?'command':key==='Alt'?'option':key==='Control'?'control':key==='Shift'?'shift':undefined;
+    const observed=new Set<Modifier>();
+    const modifierForKey=(event:KeyboardEvent):Modifier|undefined=>{
+      switch(event.code){
+        case 'MetaLeft': case 'MetaRight': return 'command';
+        case 'AltLeft': case 'AltRight': return 'option';
+        case 'ControlLeft': case 'ControlRight': return 'control';
+        case 'ShiftLeft': case 'ShiftRight': return 'shift';
+      }
+      switch(event.key){
+        case 'Meta': return 'command';
+        case 'Alt': case 'AltGraph': return 'option';
+        case 'Control': return 'control';
+        case 'Shift': return 'shift';
+        default: return undefined;
+      }
+    };
     const sync=(event:KeyboardEvent)=>{
+      const target=event.target;
+      if(importOpen || event.isComposing || (target instanceof Element && target.closest('input, textarea, select, [contenteditable]:not([contenteditable="false"])'))) {
+        observed.clear();
+        return;
+      }
+      if(event.repeat) return;
+      const pressed=modifierForKey(event);
+      if(!pressed) return;
       const next:Modifier[]=[];
       if(event.ctrlKey) next.push('control');
       if(event.altKey) next.push('option');
       if(event.shiftKey) next.push('shift');
       if(event.metaKey) next.push('command');
-      const pressed=modifierForKey(event.key);
-      if(event.type==='keydown' && pressed && !next.includes(pressed)) next.push(pressed);
-      if(event.type==='keydown' && pressed) changeLayer(next);
+      if(event.type==='keydown') {
+        if(!next.includes(pressed)) next.push(pressed);
+        for(const modifier of next) observed.add(modifier);
+        changeLayer(next);
+        // Keep a lone Alt press from transferring focus to browser menu UI.
+        if(pressed==='option' && next.length===1) event.preventDefault();
+      } else {
+        // A host may deliver keyup without keydown. Recover that press once;
+        // ordinary releases must never replace the user's latched combination.
+        const missedPress=!observed.has(pressed) || next.some(modifier=>!observed.has(modifier));
+        if(missedPress) changeLayer(next.includes(pressed)?next:[...next,pressed]);
+        observed.clear();
+        for(const modifier of next) observed.add(modifier);
+      }
     };
-    window.addEventListener('keydown',sync);
-    return()=>window.removeEventListener('keydown',sync);
-  },[]);
+    const reset=()=>observed.clear();
+    window.addEventListener('keydown',sync,true);
+    window.addEventListener('keyup',sync,true);
+    window.addEventListener('blur',reset);
+    return()=>{
+      window.removeEventListener('keydown',sync,true);
+      window.removeEventListener('keyup',sync,true);
+      window.removeEventListener('blur',reset);
+    };
+  },[importOpen]);
   function changeView(next:'demo'|'personal'){setView(next);changeLayer(next==='demo'&&defaultShortcut?defaultShortcut.modifiers:fullestLayer(next==='personal'&&personal?personal:demoWithMacDefaults));setSelected(next==='demo'?(defaultShortcut?.keyCode??null):null);setQuery('');setFilter('all');setNotice('');}
   function jump(s:Shortcut){setModifiers(s.modifiers);setSelected(s.keyCode);setFilter('all');setSearchOpen(false);setQuery('');}
   function imported(map:Keymap){setPersonal(map);setView('personal');changeLayer(fullestLayer(map));setQuery('');setFilter('all');setNotice(map.shortcuts.length?`${map.shortcuts.length} shortcuts imported`:'No assigned shortcuts in this export.');closeImport();}
